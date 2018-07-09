@@ -1,0 +1,15 @@
+Deploying Watson Deep Learning Models to Edge Devices
+https://github.com/nheidloff/watson-deep-learning-tensorflow-lite
+© Copyright IBM Corp. 2018
+
+
+The following code is embedded in this project:
+
+https://github.com/googlecodelabs/tensorflow-for-poets-2/blob/master/scripts/retrain.py
+ALv2: https://github.com/googlecodelabs/tensorflow-for-poets-2/blob/master/LICENSE
+
+https://github.com/googlecodelabs/tensorflow-for-poets-2/tree/master/ios/tflite
+ALv2: https://github.com/googlecodelabs/tensorflow-for-poets-2/blob/master/LICENSE
+
+https://github.com/tensorflow/tensorflow/tree/master/tensorflow/contrib/lite/examples/ios/camera
+ALv2: https://github.com/tensorflow/tensorflow/blob/master/LICENSE
