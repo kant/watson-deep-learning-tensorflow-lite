@@ -72,7 +72,7 @@ static void LoadLabels(NSString* file_name, NSString* file_type,
 
 // Returns the top N confidence values over threshold in the provided vector,
 // sorted by confidence in descending order.
-//static void GetTopN(const uint8_t* prediction, const int prediction_size,//nik
+//static void GetTopN(const uint8_t* prediction, const int prediction_size, // changes to original version
 static void GetTopN(const float* prediction, const int prediction_size,
                     const int num_results,
                     const float threshold, std::vector<std::pair<float, int>>* top_results) {
@@ -256,17 +256,17 @@ static void GetTopN(const float* prediction, const int prediction_size,
   const float input_mean = 0.0f;
   const float input_std = 255.0f;
 
-  float* out = interpreter->typed_input_tensor<float>(0);//nik
+  float* out = interpreter->typed_input_tensor<float>(0);
   
   for (int y = 0; y < wanted_input_height; ++y) {
-    float* out_row = out + (y * wanted_input_width * wanted_input_channels);//nik
+    float* out_row = out + (y * wanted_input_width * wanted_input_channels);
     for (int x = 0; x < wanted_input_width; ++x) {
       const int in_x = (y * image_width) / wanted_input_width;
       const int in_y = (x * image_height) / wanted_input_height;
       uint8_t* in_pixel = in + (in_y * image_width * image_channels) + (in_x * image_channels);
-      float* out_pixel = out_row + (x * wanted_input_channels);//nik
+      float* out_pixel = out_row + (x * wanted_input_channels);
       for (int c = 0; c < wanted_input_channels; ++c) {
-        out_pixel[c] = (in_pixel[c] - input_mean) / input_std;//nik
+        out_pixel[c] = (in_pixel[c] - input_mean) / input_std;
       }
     }
   }
@@ -289,7 +289,7 @@ static void GetTopN(const float* prediction, const int prediction_size,
   std::vector<std::pair<float, int>> top_results;
 
   //uint8_t* output = interpreter->typed_output_tensor<uint8_t>(0);
-  float* output = interpreter->typed_output_tensor<float>(0);//nik
+  float* output = interpreter->typed_output_tensor<float>(0); // change to original version
   GetTopN(output, output_size, kNumResults, kThreshold, &top_results);
 
   NSMutableDictionary* newValues = [NSMutableDictionary dictionary];
