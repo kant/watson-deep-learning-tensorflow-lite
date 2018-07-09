@@ -10,9 +10,3 @@ ios-photos/Pods
 ios-photos/tflite_photos_example.xcworkspace
 ios-camera/Pods
 ios-camera/tflite_camera_example.xcworkspace
-
-ios-camera/
-ios-photos/
-model/
-saved_model/
-volume/

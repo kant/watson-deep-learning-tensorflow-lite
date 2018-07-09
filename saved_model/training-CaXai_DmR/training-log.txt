@@ -1,0 +1,628 @@
+Training with training/test data at:
+  DATA_DIR: /mnt/data/nh-hunt-input
+  MODEL_DIR: /job/model-code
+  TRAINING_JOB: 
+  TRAINING_COMMAND: python3 retrain.py --bottleneck_dir ${RESULT_DIR}/bottlenecks --image_dir ${DATA_DIR}/images --how_many_training_steps=1000 --architecture mobilenet_0.25_224 --output_labels ${RESULT_DIR}/labels.txt --output_graph ${RESULT_DIR}/graph.pb --model_dir ${DATA_DIR} --learning_rate 0.01 --summaries_dir ${RESULT_DIR}/retrain_logs
+Storing trained model at:
+  RESULT_DIR: /mnt/results/nh-hunt-output/training-CaXai_DmR
+Fri Jul  6 08:12:32 UTC 2018: Running Tensorflow job
+/usr/local/lib/python3.5/dist-packages/h5py/__init__.py:36: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+INFO:tensorflow:Looking for images in 'banana'
+INFO:tensorflow:Looking for images in 'hat'
+INFO:tensorflow:Looking for images in 'headphones'
+INFO:tensorflow:Looking for images in 'mouse'
+INFO:tensorflow:Looking for images in 'plug'
+INFO:tensorflow:Looking for images in 'soccer ball'
+INFO:tensorflow:Looking for images in 'truck'
+2018-07-06 08:12:51.391404: I tensorflow/core/platform/cpu_feature_guard.cc:137] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2018-07-06 08:12:51.618575: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1105] Found device 0 with properties: 
+name: Tesla K80 major: 3 minor: 7 memoryClockRate(GHz): 0.8235
+pciBusID: 0000:83:00.0
+totalMemory: 11.17GiB freeMemory: 11.10GiB
+2018-07-06 08:12:51.766079: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1105] Found device 1 with properties: 
+name: Tesla K80 major: 3 minor: 7 memoryClockRate(GHz): 0.8235
+pciBusID: 0000:84:00.0
+totalMemory: 11.17GiB freeMemory: 11.10GiB
+2018-07-06 08:12:51.766438: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1120] Device peer to peer matrix
+2018-07-06 08:12:51.766489: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1126] DMA: 0 1 
+2018-07-06 08:12:51.766504: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1136] 0:   Y Y 
+2018-07-06 08:12:51.766514: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1136] 1:   Y Y 
+2018-07-06 08:12:51.766528: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1195] Creating TensorFlow device (/device:GPU:0) -> (device: 0, name: Tesla K80, pci bus id: 0000:83:00.0, compute capability: 3.7)
+2018-07-06 08:12:51.766539: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1195] Creating TensorFlow device (/device:GPU:1) -> (device: 1, name: Tesla K80, pci bus id: 0000:84:00.0, compute capability: 3.7)
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/banana/IMG_0139.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/banana/IMG_0140.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/banana/IMG_0141.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/banana/IMG_0142.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/banana/IMG_0143.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/banana/IMG_0146.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/banana/IMG_0147.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/banana/IMG_0149.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/banana/IMG_0153.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/banana/IMG_0155.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/banana/IMG_0156.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/banana/IMG_0157.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/banana/IMG_0158.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/banana/IMG_0233.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/banana/IMG_0235.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/banana/IMG_0236.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/banana/IMG_0237.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/banana/IMG_0238.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/banana/IMG_0239.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/banana/IMG_0241.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/banana/IMG_0242.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/banana/IMG_0355.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/banana/IMG_0356.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/banana/IMG_0357.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/banana/IMG_0358.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/banana/IMG_0359.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/banana/IMG_0361.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/banana/IMG_0362.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/banana/IMG_0363.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/banana/IMG_0364.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/banana/IMG_0144.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/banana/IMG_0150.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/banana/IMG_0151.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/banana/IMG_0234.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/banana/IMG_0240.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/banana/IMG_0360.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/banana/IMG_0145.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/banana/IMG_0152.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/banana/IMG_0154.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/banana/IMG_0159.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/hat/IMG_0118.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/hat/IMG_0120.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/hat/IMG_0122.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/hat/IMG_0123.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/hat/IMG_0124.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/hat/IMG_0125.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/hat/IMG_0128.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/hat/IMG_0130.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/hat/IMG_0131.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/hat/IMG_0132.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/hat/IMG_0133.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/hat/IMG_0134.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/hat/IMG_0135.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/hat/IMG_0136.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/hat/IMG_0137.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/hat/IMG_0283.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/hat/IMG_0284.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/hat/IMG_0285.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/hat/IMG_0287.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/hat/IMG_0289.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/hat/IMG_0290.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/hat/IMG_0291.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/hat/IMG_0315.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/hat/IMG_0316.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/hat/IMG_0317.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/hat/IMG_0318.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/hat/IMG_0319.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/hat/IMG_0320.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/hat/IMG_0322.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/hat/IMG_0323.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/hat/IMG_0324.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/hat/IMG_0138.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/hat/IMG_0288.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/hat/IMG_0119.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/hat/IMG_0121.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/hat/IMG_0127.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/hat/IMG_0129.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/hat/IMG_0286.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/hat/IMG_0292.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/hat/IMG_0321.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/headphones/IMG_0056.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/headphones/IMG_0057.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/headphones/IMG_0058.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/headphones/IMG_0060.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/headphones/IMG_0061.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/headphones/IMG_0064.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/headphones/IMG_0065.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/headphones/IMG_0067.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/headphones/IMG_0068.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/headphones/IMG_0070.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/headphones/IMG_0071.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/headphones/IMG_0072.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/headphones/IMG_0073.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/headphones/IMG_0074.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/headphones/IMG_0117.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/headphones/IMG_0263.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/headphones/IMG_0266.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/headphones/IMG_0267.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/headphones/IMG_0268.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/headphones/IMG_0270.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:100 bottleneck files created.
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/headphones/IMG_0345.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/headphones/IMG_0346.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/headphones/IMG_0347.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/headphones/IMG_0348.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/headphones/IMG_0349.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/headphones/IMG_0350.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/headphones/IMG_0351.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/headphones/IMG_0352.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/headphones/IMG_0354.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/headphones/IMG_0066.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/headphones/IMG_0271.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/headphones/IMG_0272.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/headphones/IMG_0055.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/headphones/IMG_0059.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/headphones/IMG_0062.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/headphones/IMG_0069.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/headphones/IMG_0264.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/headphones/IMG_0265.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/headphones/IMG_0269.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/headphones/IMG_0353.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/mouse/IMG_0160.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/mouse/IMG_0161.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/mouse/IMG_0162.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/mouse/IMG_0164.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/mouse/IMG_0165.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/mouse/IMG_0167.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/mouse/IMG_0168.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/mouse/IMG_0169.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/mouse/IMG_0170.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/mouse/IMG_0171.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/mouse/IMG_0172.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/mouse/IMG_0173.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/mouse/IMG_0174.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/mouse/IMG_0176.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/mouse/IMG_0177.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/mouse/IMG_0179.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/mouse/IMG_0180.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/mouse/IMG_0273.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/mouse/IMG_0275.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/mouse/IMG_0276.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/mouse/IMG_0277.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/mouse/IMG_0278.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/mouse/IMG_0279.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/mouse/IMG_0280.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/mouse/IMG_0281.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/mouse/IMG_0282.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/mouse/IMG_0335.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/mouse/IMG_0336.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/mouse/IMG_0337.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/mouse/IMG_0338.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/mouse/IMG_0339.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/mouse/IMG_0341.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/mouse/IMG_0342.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/mouse/IMG_0343.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/mouse/IMG_0344.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/mouse/IMG_0163.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/mouse/IMG_0340.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/mouse/IMG_0175.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/mouse/IMG_0178.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/mouse/IMG_0274.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/plug/IMG_0181.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/plug/IMG_0183.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/plug/IMG_0184.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/plug/IMG_0186.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/plug/IMG_0187.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/plug/IMG_0188.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/plug/IMG_0189.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/plug/IMG_0190.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/plug/IMG_0191.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/plug/IMG_0193.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/plug/IMG_0194.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/plug/IMG_0195.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/plug/IMG_0196.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/plug/IMG_0198.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/plug/IMG_0199.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/plug/IMG_0200.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/plug/IMG_0201.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/plug/IMG_0253.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/plug/IMG_0254.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/plug/IMG_0255.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/plug/IMG_0256.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/plug/IMG_0258.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/plug/IMG_0259.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/plug/IMG_0260.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/plug/IMG_0262.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/plug/IMG_0325.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/plug/IMG_0326.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/plug/IMG_0327.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/plug/IMG_0328.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/plug/IMG_0329.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/plug/IMG_0330.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/plug/IMG_0331.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/plug/IMG_0332.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/plug/IMG_0333.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/plug/IMG_0334.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/plug/IMG_0182.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/plug/IMG_0197.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/plug/IMG_0257.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/plug/IMG_0185.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/plug/IMG_0261.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:200 bottleneck files created.
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/soccer ball/IMG_0075.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/soccer ball/IMG_0076.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/soccer ball/IMG_0077.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/soccer ball/IMG_0080.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/soccer ball/IMG_0081.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/soccer ball/IMG_0083.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/soccer ball/IMG_0084.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/soccer ball/IMG_0086.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/soccer ball/IMG_0087.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/soccer ball/IMG_0088.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/soccer ball/IMG_0089.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/soccer ball/IMG_0090.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/soccer ball/IMG_0091.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/soccer ball/IMG_0094.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/soccer ball/IMG_0095.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/soccer ball/IMG_0243.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/soccer ball/IMG_0245.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/soccer ball/IMG_0246.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/soccer ball/IMG_0247.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/soccer ball/IMG_0248.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/soccer ball/IMG_0249.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/soccer ball/IMG_0250.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/soccer ball/IMG_0251.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/soccer ball/IMG_0252.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/soccer ball/IMG_0305.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/soccer ball/IMG_0306.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/soccer ball/IMG_0307.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/soccer ball/IMG_0308.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/soccer ball/IMG_0310.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/soccer ball/IMG_0311.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/soccer ball/IMG_0312.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/soccer ball/IMG_0313.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/soccer ball/IMG_0082.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/soccer ball/IMG_0085.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/soccer ball/IMG_0093.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/soccer ball/IMG_0244.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/soccer ball/IMG_0309.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/soccer ball/IMG_0078.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/soccer ball/IMG_0092.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/soccer ball/IMG_0314.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/truck/IMG_0202.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/truck/IMG_0203.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/truck/IMG_0204.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/truck/IMG_0205.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/truck/IMG_0206.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/truck/IMG_0207.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/truck/IMG_0209.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/truck/IMG_0210.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/truck/IMG_0211.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/truck/IMG_0212.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/truck/IMG_0213.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/truck/IMG_0215.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/truck/IMG_0216.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/truck/IMG_0217.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/truck/IMG_0219.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/truck/IMG_0220.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/truck/IMG_0221.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/truck/IMG_0224.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/truck/IMG_0226.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/truck/IMG_0227.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/truck/IMG_0228.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/truck/IMG_0230.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/truck/IMG_0231.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/truck/IMG_0232.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/truck/IMG_0295.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/truck/IMG_0297.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/truck/IMG_0298.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/truck/IMG_0299.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/truck/IMG_0300.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/truck/IMG_0301.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/truck/IMG_0302.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/truck/IMG_0304.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/truck/IMG_0208.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/truck/IMG_0222.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/truck/IMG_0296.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/truck/IMG_0214.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/truck/IMG_0223.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/truck/IMG_0225.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/truck/IMG_0229.JPG_mobilenet_0.25_224.txt
+INFO:tensorflow:Creating bottleneck at /mnt/results/nh-hunt-output/training-CaXai_DmR/bottlenecks/truck/IMG_0303.JPG_mobilenet_0.25_224.txt
+WARNING:tensorflow:From retrain.py:790: softmax_cross_entropy_with_logits (from tensorflow.python.ops.nn_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+
+Future major versions of TensorFlow will allow gradients to flow
+into the labels input on backprop by default.
+
+See tf.nn.softmax_cross_entropy_with_logits_v2.
+
+INFO:tensorflow:2018-07-06 08:19:30.814733: Step 0: Train accuracy = 73.0%
+INFO:tensorflow:2018-07-06 08:19:30.815825: Step 0: Cross entropy = 0.886718
+INFO:tensorflow:2018-07-06 08:19:38.343001: Step 0: Validation accuracy = 61.0% (N=100)
+INFO:tensorflow:2018-07-06 08:20:53.437308: Step 10: Train accuracy = 100.0%
+INFO:tensorflow:2018-07-06 08:20:53.449057: Step 10: Cross entropy = 0.003300
+INFO:tensorflow:2018-07-06 08:21:00.990649: Step 10: Validation accuracy = 100.0% (N=100)
+INFO:tensorflow:2018-07-06 08:22:15.514151: Step 20: Train accuracy = 100.0%
+INFO:tensorflow:2018-07-06 08:22:15.516670: Step 20: Cross entropy = 0.001620
+INFO:tensorflow:2018-07-06 08:22:22.984559: Step 20: Validation accuracy = 100.0% (N=100)
+INFO:tensorflow:2018-07-06 08:23:38.484354: Step 30: Train accuracy = 100.0%
+INFO:tensorflow:2018-07-06 08:23:38.484998: Step 30: Cross entropy = 0.001610
+INFO:tensorflow:2018-07-06 08:23:45.961943: Step 30: Validation accuracy = 100.0% (N=100)
+INFO:tensorflow:2018-07-06 08:25:01.595893: Step 40: Train accuracy = 100.0%
+INFO:tensorflow:2018-07-06 08:25:01.596591: Step 40: Cross entropy = 0.001239
+INFO:tensorflow:2018-07-06 08:25:09.101493: Step 40: Validation accuracy = 100.0% (N=100)
+INFO:tensorflow:2018-07-06 08:26:24.204916: Step 50: Train accuracy = 100.0%
+INFO:tensorflow:2018-07-06 08:26:24.205738: Step 50: Cross entropy = 0.001283
+INFO:tensorflow:2018-07-06 08:26:31.693771: Step 50: Validation accuracy = 100.0% (N=100)
+INFO:tensorflow:2018-07-06 08:27:46.452089: Step 60: Train accuracy = 100.0%
+INFO:tensorflow:2018-07-06 08:27:46.452743: Step 60: Cross entropy = 0.001051
+INFO:tensorflow:2018-07-06 08:27:53.867504: Step 60: Validation accuracy = 100.0% (N=100)
+INFO:tensorflow:2018-07-06 08:29:08.492637: Step 70: Train accuracy = 100.0%
+INFO:tensorflow:2018-07-06 08:29:08.494829: Step 70: Cross entropy = 0.001123
+INFO:tensorflow:2018-07-06 08:29:15.920897: Step 70: Validation accuracy = 100.0% (N=100)
+INFO:tensorflow:2018-07-06 08:30:30.391300: Step 80: Train accuracy = 100.0%
+INFO:tensorflow:2018-07-06 08:30:30.392468: Step 80: Cross entropy = 0.001351
+INFO:tensorflow:2018-07-06 08:30:37.884071: Step 80: Validation accuracy = 100.0% (N=100)
+INFO:tensorflow:2018-07-06 08:31:52.069694: Step 90: Train accuracy = 100.0%
+INFO:tensorflow:2018-07-06 08:31:52.070796: Step 90: Cross entropy = 0.000583
+INFO:tensorflow:2018-07-06 08:31:59.513920: Step 90: Validation accuracy = 100.0% (N=100)
+INFO:tensorflow:2018-07-06 08:33:14.563991: Step 100: Train accuracy = 100.0%
+INFO:tensorflow:2018-07-06 08:33:14.580267: Step 100: Cross entropy = 0.000888
+INFO:tensorflow:2018-07-06 08:33:22.048235: Step 100: Validation accuracy = 100.0% (N=100)
+INFO:tensorflow:2018-07-06 08:34:36.779445: Step 110: Train accuracy = 100.0%
+INFO:tensorflow:2018-07-06 08:34:36.780230: Step 110: Cross entropy = 0.000731
+INFO:tensorflow:2018-07-06 08:34:44.311413: Step 110: Validation accuracy = 100.0% (N=100)
+INFO:tensorflow:2018-07-06 08:35:58.776126: Step 120: Train accuracy = 100.0%
+INFO:tensorflow:2018-07-06 08:35:58.777318: Step 120: Cross entropy = 0.001067
+INFO:tensorflow:2018-07-06 08:36:06.188345: Step 120: Validation accuracy = 100.0% (N=100)
+INFO:tensorflow:2018-07-06 08:37:20.786057: Step 130: Train accuracy = 100.0%
+INFO:tensorflow:2018-07-06 08:37:20.786952: Step 130: Cross entropy = 0.000821
+INFO:tensorflow:2018-07-06 08:37:28.229920: Step 130: Validation accuracy = 100.0% (N=100)
+INFO:tensorflow:2018-07-06 08:38:42.493802: Step 140: Train accuracy = 100.0%
+INFO:tensorflow:2018-07-06 08:38:42.494653: Step 140: Cross entropy = 0.000762
+INFO:tensorflow:2018-07-06 08:38:49.936263: Step 140: Validation accuracy = 100.0% (N=100)
+INFO:tensorflow:2018-07-06 08:40:04.896118: Step 150: Train accuracy = 100.0%
+INFO:tensorflow:2018-07-06 08:40:04.918993: Step 150: Cross entropy = 0.000520
+INFO:tensorflow:2018-07-06 08:40:12.427206: Step 150: Validation accuracy = 100.0% (N=100)
+INFO:tensorflow:2018-07-06 08:41:27.170414: Step 160: Train accuracy = 100.0%
+INFO:tensorflow:2018-07-06 08:41:27.171418: Step 160: Cross entropy = 0.000586
+INFO:tensorflow:2018-07-06 08:41:34.841248: Step 160: Validation accuracy = 100.0% (N=100)
+INFO:tensorflow:2018-07-06 08:42:50.072098: Step 170: Train accuracy = 100.0%
+INFO:tensorflow:2018-07-06 08:42:50.073497: Step 170: Cross entropy = 0.000433
+INFO:tensorflow:2018-07-06 08:42:57.562837: Step 170: Validation accuracy = 100.0% (N=100)
+INFO:tensorflow:2018-07-06 08:44:12.962608: Step 180: Train accuracy = 100.0%
+INFO:tensorflow:2018-07-06 08:44:12.963701: Step 180: Cross entropy = 0.000358
+INFO:tensorflow:2018-07-06 08:44:20.331539: Step 180: Validation accuracy = 100.0% (N=100)
+INFO:tensorflow:2018-07-06 08:45:35.320905: Step 190: Train accuracy = 100.0%
+INFO:tensorflow:2018-07-06 08:45:35.321824: Step 190: Cross entropy = 0.000399
+INFO:tensorflow:2018-07-06 08:45:42.814196: Step 190: Validation accuracy = 100.0% (N=100)
+INFO:tensorflow:2018-07-06 08:46:57.699914: Step 200: Train accuracy = 100.0%
+INFO:tensorflow:2018-07-06 08:46:57.700992: Step 200: Cross entropy = 0.000727
+INFO:tensorflow:2018-07-06 08:47:05.124757: Step 200: Validation accuracy = 100.0% (N=100)
+INFO:tensorflow:2018-07-06 08:48:19.806832: Step 210: Train accuracy = 100.0%
+INFO:tensorflow:2018-07-06 08:48:19.808469: Step 210: Cross entropy = 0.000488
+INFO:tensorflow:2018-07-06 08:48:27.390114: Step 210: Validation accuracy = 100.0% (N=100)
+INFO:tensorflow:2018-07-06 08:49:43.501475: Step 220: Train accuracy = 100.0%
+INFO:tensorflow:2018-07-06 08:49:43.511810: Step 220: Cross entropy = 0.000383
+INFO:tensorflow:2018-07-06 08:49:50.938396: Step 220: Validation accuracy = 100.0% (N=100)
+INFO:tensorflow:2018-07-06 08:51:06.415921: Step 230: Train accuracy = 100.0%
+INFO:tensorflow:2018-07-06 08:51:06.417125: Step 230: Cross entropy = 0.000400
+INFO:tensorflow:2018-07-06 08:51:13.960520: Step 230: Validation accuracy = 100.0% (N=100)
+INFO:tensorflow:2018-07-06 08:52:28.624336: Step 240: Train accuracy = 100.0%
+INFO:tensorflow:2018-07-06 08:52:28.625249: Step 240: Cross entropy = 0.000344
+INFO:tensorflow:2018-07-06 08:52:36.143559: Step 240: Validation accuracy = 100.0% (N=100)
+INFO:tensorflow:2018-07-06 08:53:51.269636: Step 250: Train accuracy = 100.0%
+INFO:tensorflow:2018-07-06 08:53:51.270527: Step 250: Cross entropy = 0.000481
+INFO:tensorflow:2018-07-06 08:53:58.810387: Step 250: Validation accuracy = 100.0% (N=100)
+INFO:tensorflow:2018-07-06 08:55:13.868190: Step 260: Train accuracy = 100.0%
+INFO:tensorflow:2018-07-06 08:55:13.869115: Step 260: Cross entropy = 0.000442
+INFO:tensorflow:2018-07-06 08:55:21.282064: Step 260: Validation accuracy = 100.0% (N=100)
+INFO:tensorflow:2018-07-06 08:56:36.863824: Step 270: Train accuracy = 100.0%
+INFO:tensorflow:2018-07-06 08:56:36.864832: Step 270: Cross entropy = 0.000319
+INFO:tensorflow:2018-07-06 08:56:44.405803: Step 270: Validation accuracy = 100.0% (N=100)
+INFO:tensorflow:2018-07-06 08:57:59.191567: Step 280: Train accuracy = 100.0%
+INFO:tensorflow:2018-07-06 08:57:59.192549: Step 280: Cross entropy = 0.000436
+INFO:tensorflow:2018-07-06 08:58:06.647575: Step 280: Validation accuracy = 100.0% (N=100)
+INFO:tensorflow:2018-07-06 08:59:21.432199: Step 290: Train accuracy = 100.0%
+INFO:tensorflow:2018-07-06 08:59:21.432969: Step 290: Cross entropy = 0.000507
+INFO:tensorflow:2018-07-06 08:59:28.920048: Step 290: Validation accuracy = 100.0% (N=100)
+INFO:tensorflow:2018-07-06 09:00:45.747988: Step 300: Train accuracy = 100.0%
+INFO:tensorflow:2018-07-06 09:00:45.750587: Step 300: Cross entropy = 0.000729
+INFO:tensorflow:2018-07-06 09:00:53.248337: Step 300: Validation accuracy = 100.0% (N=100)
+INFO:tensorflow:2018-07-06 09:02:08.828092: Step 310: Train accuracy = 100.0%
+INFO:tensorflow:2018-07-06 09:02:08.829211: Step 310: Cross entropy = 0.000469
+INFO:tensorflow:2018-07-06 09:02:16.268438: Step 310: Validation accuracy = 100.0% (N=100)
+INFO:tensorflow:2018-07-06 09:03:31.720440: Step 320: Train accuracy = 100.0%
+INFO:tensorflow:2018-07-06 09:03:31.721265: Step 320: Cross entropy = 0.000594
+INFO:tensorflow:2018-07-06 09:03:39.278671: Step 320: Validation accuracy = 100.0% (N=100)
+INFO:tensorflow:2018-07-06 09:04:54.183037: Step 330: Train accuracy = 100.0%
+INFO:tensorflow:2018-07-06 09:04:54.188306: Step 330: Cross entropy = 0.000398
+INFO:tensorflow:2018-07-06 09:05:01.793947: Step 330: Validation accuracy = 100.0% (N=100)
+INFO:tensorflow:2018-07-06 09:06:17.040560: Step 340: Train accuracy = 100.0%
+INFO:tensorflow:2018-07-06 09:06:17.042958: Step 340: Cross entropy = 0.000293
+INFO:tensorflow:2018-07-06 09:07:29.651137: Step 340: Validation accuracy = 100.0% (N=100)
+INFO:tensorflow:2018-07-06 09:08:44.554031: Step 350: Train accuracy = 100.0%
+INFO:tensorflow:2018-07-06 09:08:44.554953: Step 350: Cross entropy = 0.000354
+INFO:tensorflow:2018-07-06 09:08:52.104291: Step 350: Validation accuracy = 100.0% (N=100)
+INFO:tensorflow:2018-07-06 09:10:07.212179: Step 360: Train accuracy = 100.0%
+INFO:tensorflow:2018-07-06 09:10:07.213740: Step 360: Cross entropy = 0.000316
+INFO:tensorflow:2018-07-06 09:10:14.655789: Step 360: Validation accuracy = 100.0% (N=100)
+INFO:tensorflow:2018-07-06 09:11:29.386447: Step 370: Train accuracy = 100.0%
+INFO:tensorflow:2018-07-06 09:11:29.409496: Step 370: Cross entropy = 0.000506
+INFO:tensorflow:2018-07-06 09:11:36.971715: Step 370: Validation accuracy = 100.0% (N=100)
+INFO:tensorflow:2018-07-06 09:12:51.883414: Step 380: Train accuracy = 100.0%
+INFO:tensorflow:2018-07-06 09:12:51.896218: Step 380: Cross entropy = 0.000389
+INFO:tensorflow:2018-07-06 09:12:59.322598: Step 380: Validation accuracy = 100.0% (N=100)
+INFO:tensorflow:2018-07-06 09:14:14.488062: Step 390: Train accuracy = 100.0%
+INFO:tensorflow:2018-07-06 09:14:14.491322: Step 390: Cross entropy = 0.000170
+INFO:tensorflow:2018-07-06 09:14:22.035755: Step 390: Validation accuracy = 100.0% (N=100)
+INFO:tensorflow:2018-07-06 09:15:37.883228: Step 400: Train accuracy = 100.0%
+INFO:tensorflow:2018-07-06 09:15:37.886013: Step 400: Cross entropy = 0.000321
+INFO:tensorflow:2018-07-06 09:15:45.414920: Step 400: Validation accuracy = 100.0% (N=100)
+INFO:tensorflow:2018-07-06 09:17:00.818319: Step 410: Train accuracy = 100.0%
+INFO:tensorflow:2018-07-06 09:17:00.820252: Step 410: Cross entropy = 0.000360
+INFO:tensorflow:2018-07-06 09:17:08.322152: Step 410: Validation accuracy = 100.0% (N=100)
+INFO:tensorflow:2018-07-06 09:18:24.044645: Step 420: Train accuracy = 100.0%
+INFO:tensorflow:2018-07-06 09:18:24.045673: Step 420: Cross entropy = 0.000301
+INFO:tensorflow:2018-07-06 09:18:31.542601: Step 420: Validation accuracy = 100.0% (N=100)
+INFO:tensorflow:2018-07-06 09:19:47.270777: Step 430: Train accuracy = 100.0%
+INFO:tensorflow:2018-07-06 09:19:47.272603: Step 430: Cross entropy = 0.000223
+INFO:tensorflow:2018-07-06 09:19:54.764242: Step 430: Validation accuracy = 100.0% (N=100)
+INFO:tensorflow:2018-07-06 09:21:10.034965: Step 440: Train accuracy = 100.0%
+INFO:tensorflow:2018-07-06 09:21:10.036068: Step 440: Cross entropy = 0.000488
+INFO:tensorflow:2018-07-06 09:21:17.796267: Step 440: Validation accuracy = 100.0% (N=100)
+INFO:tensorflow:2018-07-06 09:22:33.320264: Step 450: Train accuracy = 100.0%
+INFO:tensorflow:2018-07-06 09:22:33.321564: Step 450: Cross entropy = 0.000150
+INFO:tensorflow:2018-07-06 09:22:40.751482: Step 450: Validation accuracy = 100.0% (N=100)
+INFO:tensorflow:2018-07-06 09:23:56.176735: Step 460: Train accuracy = 100.0%
+INFO:tensorflow:2018-07-06 09:23:56.177445: Step 460: Cross entropy = 0.000490
+INFO:tensorflow:2018-07-06 09:24:03.619035: Step 460: Validation accuracy = 100.0% (N=100)
+INFO:tensorflow:2018-07-06 09:25:19.136588: Step 470: Train accuracy = 100.0%
+INFO:tensorflow:2018-07-06 09:25:19.137820: Step 470: Cross entropy = 0.000276
+INFO:tensorflow:2018-07-06 09:25:26.771274: Step 470: Validation accuracy = 100.0% (N=100)
+INFO:tensorflow:2018-07-06 09:26:41.962644: Step 480: Train accuracy = 100.0%
+INFO:tensorflow:2018-07-06 09:26:41.963476: Step 480: Cross entropy = 0.000279
+INFO:tensorflow:2018-07-06 09:26:49.474322: Step 480: Validation accuracy = 100.0% (N=100)
+INFO:tensorflow:2018-07-06 09:28:04.494586: Step 490: Train accuracy = 100.0%
+INFO:tensorflow:2018-07-06 09:28:04.496560: Step 490: Cross entropy = 0.000437
+INFO:tensorflow:2018-07-06 09:28:12.070784: Step 490: Validation accuracy = 100.0% (N=100)
+INFO:tensorflow:2018-07-06 09:29:27.290309: Step 500: Train accuracy = 100.0%
+INFO:tensorflow:2018-07-06 09:29:27.291249: Step 500: Cross entropy = 0.000400
+INFO:tensorflow:2018-07-06 09:29:35.130180: Step 500: Validation accuracy = 100.0% (N=100)
+INFO:tensorflow:2018-07-06 09:30:52.967422: Step 510: Train accuracy = 100.0%
+INFO:tensorflow:2018-07-06 09:30:52.968331: Step 510: Cross entropy = 0.000336
+INFO:tensorflow:2018-07-06 09:31:00.625661: Step 510: Validation accuracy = 100.0% (N=100)
+INFO:tensorflow:2018-07-06 09:32:16.273729: Step 520: Train accuracy = 100.0%
+INFO:tensorflow:2018-07-06 09:32:16.274536: Step 520: Cross entropy = 0.000247
+INFO:tensorflow:2018-07-06 09:32:23.894966: Step 520: Validation accuracy = 100.0% (N=100)
+INFO:tensorflow:2018-07-06 09:33:39.865270: Step 530: Train accuracy = 100.0%
+INFO:tensorflow:2018-07-06 09:33:39.877467: Step 530: Cross entropy = 0.000257
+INFO:tensorflow:2018-07-06 09:33:47.363942: Step 530: Validation accuracy = 100.0% (N=100)
+INFO:tensorflow:2018-07-06 09:35:02.223209: Step 540: Train accuracy = 100.0%
+INFO:tensorflow:2018-07-06 09:35:02.224253: Step 540: Cross entropy = 0.000256
+INFO:tensorflow:2018-07-06 09:35:09.838655: Step 540: Validation accuracy = 100.0% (N=100)
+INFO:tensorflow:2018-07-06 09:36:24.714529: Step 550: Train accuracy = 100.0%
+INFO:tensorflow:2018-07-06 09:36:24.715389: Step 550: Cross entropy = 0.000253
+INFO:tensorflow:2018-07-06 09:36:32.118711: Step 550: Validation accuracy = 100.0% (N=100)
+INFO:tensorflow:2018-07-06 09:37:46.954298: Step 560: Train accuracy = 100.0%
+INFO:tensorflow:2018-07-06 09:37:46.955296: Step 560: Cross entropy = 0.000302
+INFO:tensorflow:2018-07-06 09:37:54.477444: Step 560: Validation accuracy = 100.0% (N=100)
+INFO:tensorflow:2018-07-06 09:39:09.871966: Step 570: Train accuracy = 100.0%
+INFO:tensorflow:2018-07-06 09:39:09.872915: Step 570: Cross entropy = 0.000202
+INFO:tensorflow:2018-07-06 09:39:17.366816: Step 570: Validation accuracy = 100.0% (N=100)
+INFO:tensorflow:2018-07-06 09:40:32.590559: Step 580: Train accuracy = 100.0%
+INFO:tensorflow:2018-07-06 09:40:32.591387: Step 580: Cross entropy = 0.000241
+INFO:tensorflow:2018-07-06 09:40:40.144035: Step 580: Validation accuracy = 100.0% (N=100)
+INFO:tensorflow:2018-07-06 09:41:55.376002: Step 590: Train accuracy = 100.0%
+INFO:tensorflow:2018-07-06 09:41:55.376878: Step 590: Cross entropy = 0.000253
+INFO:tensorflow:2018-07-06 09:42:02.939446: Step 590: Validation accuracy = 100.0% (N=100)
+INFO:tensorflow:2018-07-06 09:43:17.894481: Step 600: Train accuracy = 100.0%
+INFO:tensorflow:2018-07-06 09:43:17.895439: Step 600: Cross entropy = 0.000252
+INFO:tensorflow:2018-07-06 09:43:25.417657: Step 600: Validation accuracy = 100.0% (N=100)
+INFO:tensorflow:2018-07-06 09:44:40.422793: Step 610: Train accuracy = 100.0%
+INFO:tensorflow:2018-07-06 09:44:40.433655: Step 610: Cross entropy = 0.000223
+INFO:tensorflow:2018-07-06 09:44:48.160752: Step 610: Validation accuracy = 100.0% (N=100)
+INFO:tensorflow:2018-07-06 09:46:03.170450: Step 620: Train accuracy = 100.0%
+INFO:tensorflow:2018-07-06 09:46:03.172446: Step 620: Cross entropy = 0.000230
+INFO:tensorflow:2018-07-06 09:46:10.698615: Step 620: Validation accuracy = 100.0% (N=100)
+INFO:tensorflow:2018-07-06 09:47:26.160755: Step 630: Train accuracy = 100.0%
+INFO:tensorflow:2018-07-06 09:47:26.161725: Step 630: Cross entropy = 0.000277
+INFO:tensorflow:2018-07-06 09:47:33.666938: Step 630: Validation accuracy = 100.0% (N=100)
+INFO:tensorflow:2018-07-06 09:48:48.716148: Step 640: Train accuracy = 100.0%
+INFO:tensorflow:2018-07-06 09:48:48.728008: Step 640: Cross entropy = 0.000237
+INFO:tensorflow:2018-07-06 09:48:56.211903: Step 640: Validation accuracy = 100.0% (N=100)
+INFO:tensorflow:2018-07-06 09:50:11.125244: Step 650: Train accuracy = 100.0%
+INFO:tensorflow:2018-07-06 09:50:11.125895: Step 650: Cross entropy = 0.000276
+INFO:tensorflow:2018-07-06 09:50:18.644652: Step 650: Validation accuracy = 100.0% (N=100)
+INFO:tensorflow:2018-07-06 09:51:33.352549: Step 660: Train accuracy = 100.0%
+INFO:tensorflow:2018-07-06 09:51:33.353167: Step 660: Cross entropy = 0.000252
+INFO:tensorflow:2018-07-06 09:51:40.837855: Step 660: Validation accuracy = 100.0% (N=100)
+INFO:tensorflow:2018-07-06 09:52:55.873144: Step 670: Train accuracy = 100.0%
+INFO:tensorflow:2018-07-06 09:52:55.873884: Step 670: Cross entropy = 0.000312
+INFO:tensorflow:2018-07-06 09:53:03.356764: Step 670: Validation accuracy = 100.0% (N=100)
+INFO:tensorflow:2018-07-06 09:54:18.213092: Step 680: Train accuracy = 100.0%
+INFO:tensorflow:2018-07-06 09:54:18.214237: Step 680: Cross entropy = 0.000286
+INFO:tensorflow:2018-07-06 09:54:25.674842: Step 680: Validation accuracy = 100.0% (N=100)
+INFO:tensorflow:2018-07-06 09:55:40.672604: Step 690: Train accuracy = 100.0%
+INFO:tensorflow:2018-07-06 09:55:40.674203: Step 690: Cross entropy = 0.000315
+INFO:tensorflow:2018-07-06 09:55:48.131657: Step 690: Validation accuracy = 100.0% (N=100)
+INFO:tensorflow:2018-07-06 09:57:02.741506: Step 700: Train accuracy = 100.0%
+INFO:tensorflow:2018-07-06 09:57:02.742422: Step 700: Cross entropy = 0.000296
+INFO:tensorflow:2018-07-06 09:57:10.255788: Step 700: Validation accuracy = 100.0% (N=100)
+INFO:tensorflow:2018-07-06 09:58:25.158597: Step 710: Train accuracy = 100.0%
+INFO:tensorflow:2018-07-06 09:58:25.159572: Step 710: Cross entropy = 0.000214
+INFO:tensorflow:2018-07-06 09:58:32.632511: Step 710: Validation accuracy = 100.0% (N=100)
+INFO:tensorflow:2018-07-06 09:59:47.750118: Step 720: Train accuracy = 100.0%
+INFO:tensorflow:2018-07-06 09:59:47.750746: Step 720: Cross entropy = 0.000234
+INFO:tensorflow:2018-07-06 09:59:55.146562: Step 720: Validation accuracy = 100.0% (N=100)
+INFO:tensorflow:2018-07-06 10:01:10.215545: Step 730: Train accuracy = 100.0%
+INFO:tensorflow:2018-07-06 10:01:10.226437: Step 730: Cross entropy = 0.000417
+INFO:tensorflow:2018-07-06 10:01:17.867436: Step 730: Validation accuracy = 100.0% (N=100)
+INFO:tensorflow:2018-07-06 10:02:33.065781: Step 740: Train accuracy = 100.0%
+INFO:tensorflow:2018-07-06 10:02:33.068498: Step 740: Cross entropy = 0.000198
+INFO:tensorflow:2018-07-06 10:02:40.550735: Step 740: Validation accuracy = 100.0% (N=100)
+INFO:tensorflow:2018-07-06 10:03:56.467249: Step 750: Train accuracy = 100.0%
+INFO:tensorflow:2018-07-06 10:03:56.468039: Step 750: Cross entropy = 0.000158
+INFO:tensorflow:2018-07-06 10:04:03.974862: Step 750: Validation accuracy = 100.0% (N=100)
+INFO:tensorflow:2018-07-06 10:05:19.367946: Step 760: Train accuracy = 100.0%
+INFO:tensorflow:2018-07-06 10:05:19.368672: Step 760: Cross entropy = 0.000185
+INFO:tensorflow:2018-07-06 10:05:26.850521: Step 760: Validation accuracy = 100.0% (N=100)
+INFO:tensorflow:2018-07-06 10:06:41.703976: Step 770: Train accuracy = 100.0%
+INFO:tensorflow:2018-07-06 10:06:41.704759: Step 770: Cross entropy = 0.000196
+INFO:tensorflow:2018-07-06 10:06:49.214153: Step 770: Validation accuracy = 100.0% (N=100)
+INFO:tensorflow:2018-07-06 10:08:03.912150: Step 780: Train accuracy = 100.0%
+INFO:tensorflow:2018-07-06 10:08:03.913370: Step 780: Cross entropy = 0.000269
+INFO:tensorflow:2018-07-06 10:08:11.340661: Step 780: Validation accuracy = 100.0% (N=100)
+INFO:tensorflow:2018-07-06 10:09:25.676223: Step 790: Train accuracy = 100.0%
+INFO:tensorflow:2018-07-06 10:09:25.677981: Step 790: Cross entropy = 0.000129
+INFO:tensorflow:2018-07-06 10:09:33.061879: Step 790: Validation accuracy = 100.0% (N=100)
+INFO:tensorflow:2018-07-06 10:10:47.516621: Step 800: Train accuracy = 100.0%
+INFO:tensorflow:2018-07-06 10:10:47.517740: Step 800: Cross entropy = 0.000197
+INFO:tensorflow:2018-07-06 10:10:54.898394: Step 800: Validation accuracy = 100.0% (N=100)
+INFO:tensorflow:2018-07-06 10:12:09.842069: Step 810: Train accuracy = 100.0%
+INFO:tensorflow:2018-07-06 10:12:09.842953: Step 810: Cross entropy = 0.000327
+INFO:tensorflow:2018-07-06 10:12:17.251196: Step 810: Validation accuracy = 100.0% (N=100)
+INFO:tensorflow:2018-07-06 10:13:33.194844: Step 820: Train accuracy = 100.0%
+INFO:tensorflow:2018-07-06 10:13:33.196774: Step 820: Cross entropy = 0.000295
+INFO:tensorflow:2018-07-06 10:13:40.811680: Step 820: Validation accuracy = 100.0% (N=100)
+INFO:tensorflow:2018-07-06 10:14:56.239120: Step 830: Train accuracy = 100.0%
+INFO:tensorflow:2018-07-06 10:14:56.240247: Step 830: Cross entropy = 0.000203
+INFO:tensorflow:2018-07-06 10:15:03.701561: Step 830: Validation accuracy = 100.0% (N=100)
+INFO:tensorflow:2018-07-06 10:16:18.928306: Step 840: Train accuracy = 100.0%
+INFO:tensorflow:2018-07-06 10:16:18.929161: Step 840: Cross entropy = 0.000271
+INFO:tensorflow:2018-07-06 10:16:26.353667: Step 840: Validation accuracy = 100.0% (N=100)
+INFO:tensorflow:2018-07-06 10:17:41.953599: Step 850: Train accuracy = 100.0%
+INFO:tensorflow:2018-07-06 10:17:41.955943: Step 850: Cross entropy = 0.000335
+INFO:tensorflow:2018-07-06 10:17:49.445728: Step 850: Validation accuracy = 100.0% (N=100)
+INFO:tensorflow:2018-07-06 10:19:05.183770: Step 860: Train accuracy = 100.0%
+INFO:tensorflow:2018-07-06 10:19:05.185157: Step 860: Cross entropy = 0.000158
+INFO:tensorflow:2018-07-06 10:19:12.666199: Step 860: Validation accuracy = 100.0% (N=100)
+INFO:tensorflow:2018-07-06 10:20:28.000307: Step 870: Train accuracy = 100.0%
+INFO:tensorflow:2018-07-06 10:20:28.001327: Step 870: Cross entropy = 0.000222
+INFO:tensorflow:2018-07-06 10:20:35.485276: Step 870: Validation accuracy = 100.0% (N=100)
+INFO:tensorflow:2018-07-06 10:21:50.340629: Step 880: Train accuracy = 100.0%
+INFO:tensorflow:2018-07-06 10:21:50.341927: Step 880: Cross entropy = 0.000133
+INFO:tensorflow:2018-07-06 10:21:57.779948: Step 880: Validation accuracy = 100.0% (N=100)
+INFO:tensorflow:2018-07-06 10:23:17.570495: Step 890: Train accuracy = 100.0%
+INFO:tensorflow:2018-07-06 10:23:17.570969: Step 890: Cross entropy = 0.000219
+INFO:tensorflow:2018-07-06 10:23:25.180688: Step 890: Validation accuracy = 100.0% (N=100)
+INFO:tensorflow:2018-07-06 10:24:41.063818: Step 900: Train accuracy = 100.0%
+INFO:tensorflow:2018-07-06 10:24:41.064480: Step 900: Cross entropy = 0.000196
+INFO:tensorflow:2018-07-06 10:24:48.614316: Step 900: Validation accuracy = 100.0% (N=100)
+INFO:tensorflow:2018-07-06 10:26:03.540028: Step 910: Train accuracy = 100.0%
+INFO:tensorflow:2018-07-06 10:26:03.541008: Step 910: Cross entropy = 0.000198
+INFO:tensorflow:2018-07-06 10:26:10.991945: Step 910: Validation accuracy = 100.0% (N=100)
+INFO:tensorflow:2018-07-06 10:27:25.978899: Step 920: Train accuracy = 100.0%
+INFO:tensorflow:2018-07-06 10:27:25.979465: Step 920: Cross entropy = 0.000222
+INFO:tensorflow:2018-07-06 10:27:33.484301: Step 920: Validation accuracy = 100.0% (N=100)
+INFO:tensorflow:2018-07-06 10:28:48.821574: Step 930: Train accuracy = 100.0%
+INFO:tensorflow:2018-07-06 10:28:48.822696: Step 930: Cross entropy = 0.000284
+INFO:tensorflow:2018-07-06 10:28:56.302165: Step 930: Validation accuracy = 100.0% (N=100)
+INFO:tensorflow:2018-07-06 10:30:12.228377: Step 940: Train accuracy = 100.0%
+INFO:tensorflow:2018-07-06 10:30:12.239558: Step 940: Cross entropy = 0.000254
+INFO:tensorflow:2018-07-06 10:30:19.830540: Step 940: Validation accuracy = 100.0% (N=100)
+INFO:tensorflow:2018-07-06 10:31:35.005199: Step 950: Train accuracy = 100.0%
+INFO:tensorflow:2018-07-06 10:31:35.019576: Step 950: Cross entropy = 0.000225
+INFO:tensorflow:2018-07-06 10:31:42.573290: Step 950: Validation accuracy = 100.0% (N=100)
+INFO:tensorflow:2018-07-06 10:32:57.919297: Step 960: Train accuracy = 100.0%
+INFO:tensorflow:2018-07-06 10:32:57.920097: Step 960: Cross entropy = 0.000135
+INFO:tensorflow:2018-07-06 10:33:05.378017: Step 960: Validation accuracy = 100.0% (N=100)
+INFO:tensorflow:2018-07-06 10:34:20.669616: Step 970: Train accuracy = 100.0%
+INFO:tensorflow:2018-07-06 10:34:20.670112: Step 970: Cross entropy = 0.000198
+INFO:tensorflow:2018-07-06 10:34:28.177390: Step 970: Validation accuracy = 100.0% (N=100)
+INFO:tensorflow:2018-07-06 10:35:43.377519: Step 980: Train accuracy = 100.0%
+INFO:tensorflow:2018-07-06 10:35:43.378146: Step 980: Cross entropy = 0.000194
+INFO:tensorflow:2018-07-06 10:35:51.005546: Step 980: Validation accuracy = 100.0% (N=100)
+INFO:tensorflow:2018-07-06 10:37:05.890548: Step 990: Train accuracy = 100.0%
+INFO:tensorflow:2018-07-06 10:37:05.891310: Step 990: Cross entropy = 0.000254
+INFO:tensorflow:2018-07-06 10:37:13.286042: Step 990: Validation accuracy = 100.0% (N=100)
+INFO:tensorflow:2018-07-06 10:38:20.538744: Step 999: Train accuracy = 100.0%
+INFO:tensorflow:2018-07-06 10:38:20.539261: Step 999: Cross entropy = 0.000155
+INFO:tensorflow:2018-07-06 10:38:28.074583: Step 999: Validation accuracy = 100.0% (N=100)
+INFO:tensorflow:Final test accuracy = 100.0% (N=24)
+INFO:tensorflow:Froze 2 variables.
+Converted 2 variables to const ops.

@@ -6,7 +6,7 @@ This is a screenshot from the app running on an iPhone where currently a truck i
 
 ![alt text](documentation/ios-camera-app-small.JPEG "Screenshot")
 
-Check out the [video](https://youtu.be/4WTpMmqraXI) for a quick demo.
+Check out the [video](https://youtu.be/avMQ5VSFb3A) for a quick demo.
 
 In order to train the model I've taken pictures from seven items: plug, soccer ball, mouse, hat, truck, banana and headphones. You can find the images in the [data](data/images) directory.
 
@@ -156,14 +156,22 @@ $ cp ${PROJECT_DIR}/volume/graph.lite ${PROJECT_DIR}/ios-camera/data/mobilenet_q
 
 ## Deployment of the iOS Apps
 
-tbd
+Most of the code of this project has been copied from [TensorFlow for Poets 2: TFMobile](https://codelabs.developers.google.com/codelabs/tensorflow-for-poets-2/#0). The tutorial describes how to easily deploy the model to Android devices.
 
-https://www.tensorflow.org/mobile/tflite/demo_ios
+For iOS I've run into some issues (not quantized model and different TensorFlow versions). I've made a few changes to the [iOS photos app](https://github.com/googlecodelabs/tensorflow-for-poets-2/tree/master/ios/tflite) and the [iOS camera app](https://github.com/tensorflow/tensorflow/tree/master/tensorflow/contrib/lite/examples/ios/camera) which you can find in the directories [ios-photos](/ios-photos) and [ios-camera](/ios-camera).
 
+See the TensorFlow [documentation](https://www.tensorflow.org/mobile/tflite/demo_ios) how to install the prerequisites. 
+
+Invoke these commands to launch the iOS projects in Xcode.
+
+```bash
 cd ${PROJECT_DIR}/ios-camera
 pod install
 open tflite_camera_example.xcworkspace
+```
 
+```bash
 cd ${PROJECT_DIR}/ios-photos
 pod install
 open tflite_photos_example.xcworkspace
+```
