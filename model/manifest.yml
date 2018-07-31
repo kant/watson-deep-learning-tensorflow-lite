@@ -1,0 +1,28 @@
+name: retrain
+description: retrain
+version: "1.0"
+gpus: 0
+cpus: 0.5
+memory: 1Gb
+learners: 1
+
+data_stores:
+  - id: sl-internal-os
+    type: mount_cos
+    training_data:
+      container: nh-hunt-input
+    training_results:
+      container: nh-hunt-output
+    connection:
+      auth_url: http://169.62.129.231:32551
+      user_name: test
+      password: test
+
+framework:
+  name: tensorflow
+  version: "1.5.0-py3"
+  command: python3 retrain.py --bottleneck_dir ${RESULT_DIR}/bottlenecks --image_dir ${DATA_DIR}/images --how_many_training_steps=1000 --architecture mobilenet_0.25_224 --output_labels ${RESULT_DIR}/labels.txt --output_graph ${RESULT_DIR}/graph.pb --model_dir ${DATA_DIR} --learning_rate 0.01 --summaries_dir ${RESULT_DIR}/retrain_logs
+
+evaluation_metrics:
+  type: tensorboard
+  in: "$JOB_STATE_DIR/logs/tb"

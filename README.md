@@ -29,9 +29,9 @@ Install and configure the AWS CLI by following these [instructions](https://cons
 
 ## Training of the Model
 
-Models can be trained either locally or with IBM Watson in the cloud.
+Models can be trained either locally, with IBM Watson in the cloud or via Fabric for Deep Learning on a Kubernetes cluster.
 
-In both cases clone this repo, download MobileNet and set up the environment:
+In all cases clone this repo, download MobileNet and set up the environment:
 
 ```bash
 $ git clone https://github.com/nheidloff/watson-deep-learning-tensorflow-lite
@@ -41,6 +41,9 @@ $ export PROJECT_DIR=$my_project_dir
 $ cd data
 $ wget http://download.tensorflow.org/models/mobilenet_v1_2018_02_22/mobilenet_v1_0.25_224.tgz
 $ tar xvzf mobilenet_v1_0.25_224.tgz 
+$ cd mobilenet_v1_0.25_224
+$ wget http://download.tensorflow.org/models/mobilenet_v1_0.25_224_frozen.tgz
+$ tar xvzf mobilenet_v1_0.25_224_frozen.tgz
 $ cp -R ${PROJECT_DIR}/data ${PROJECT_DIR}/volume/data
 ```
 
@@ -90,6 +93,64 @@ $ cp ${PROJECT_DIR}/saved_model/training-CaXai_DmR/labels.txt ${PROJECT_DIR}/ios
 ```
 
 
+### Training with Fabric for Deep Learning
+
+See the [documentation](https://github.com/IBM/FfDL#61-using-ffdl-local-s3-based-object-storage) for details.
+
+Configure S3 by running these commands:
+
+```bash
+$ export VM_TYPE=none
+$ export SHARED_VOLUME_STORAGE_CLASS="ibmc-file-gold";
+$ bx cs workers <cluster_name>
+$ export PUBLIC_IP=<Cluster Public IP>
+$ node_ip=$PUBLIC_IP
+$ s3_port=$(kubectl get service s3 -o jsonpath='{.spec.ports[0].nodePort}')
+$ s3_url=http://$node_ip:$s3_port
+$ export AWS_ACCESS_KEY_ID=test; export AWS_SECRET_ACCESS_KEY=test; export AWS_DEFAULT_REGION=us-east-1;
+$ s3cmd="aws --endpoint-url=$s3_url s3"
+```
+
+Create two buckets (use unique names):
+
+```bash
+$ $s3cmd mb s3://nh-hunt-input
+$ $s3cmd mb s3://nh-hunt-output
+```
+
+Upload bucket with MobileNet and data (use your unique bucket name):
+
+```bash
+$ cd data/
+$ $s3cmd cp . s3://nh-hunt-input/ --recursive 
+```
+
+Prepare the training:
+* Define the public IP of your Kubernetes cluster and your bucket names in [manifest.yml](model/manifest.yml).
+* Compress [retrain.py](model/retrain.py) into [tf-model.zip](model/tf-model.zip) (only necessary if you change this file).
+
+Invoke the training and check for status via the web UI (change the public IP):
+
+http://169.62.129.231:31913/#/login?endpoint=169.62.129.231:30383&username=test-user)
+
+Define [manifest.yml](model/manifest.yml) and [tf-model.zip](model/tf-model.zip) and start the training (see [screenshot](documentation/ffdl-training.png)).
+
+Download the saved model:
+
+```bash
+$ cd ${PROJECT_DIR}/saved-model
+$ $s3cmd sync s3://nh-hunt-output .
+```
+
+Run these commands (replace the training sub directory name):
+
+```bash
+$ cp ${PROJECT_DIR}/saved_model/training-CaXai_DmR/graph.pb ${PROJECT_DIR}/volume/training/graph.pb
+$ cp ${PROJECT_DIR}/saved_model/training-CaXai_DmR/labels.txt ${PROJECT_DIR}/ios-photos/data/labels.txt
+$ cp ${PROJECT_DIR}/saved_model/training-CaXai_DmR/labels.txt ${PROJECT_DIR}/ios-camera/data/labels.txt
+```
+
+
 ### Local Training
 
 Run the Docker image:
@@ -122,7 +183,7 @@ $ cp ${PROJECT_DIR}/volume/labels.txt ${PROJECT_DIR}/ios-camera/data/labels.txt
 ```
 
 
-### Local Training and Watson Traning
+### Local Training, Watson Traning and Fabric for Deep Learning Training
 
 Run the Docker image:
 

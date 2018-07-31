@@ -320,12 +320,13 @@ def maybe_download_and_extract(data_url):
     data_url: Web location of the tar file containing the pretrained model.
   """
   dest_directory = FLAGS.model_dir
+  
   if not os.path.exists(dest_directory):
     os.makedirs(dest_directory)
   filename = data_url.split('/')[-1]
   filepath = os.path.join(dest_directory, filename)
+  
   if not os.path.exists(filepath):
-
     def _progress(count, block_size, total_size):
       sys.stdout.write('\r>> Downloading %s %.1f%%' %
                        (filename,
@@ -337,7 +338,7 @@ def maybe_download_and_extract(data_url):
     statinfo = os.stat(filepath)
     tf.logging.info('Successfully downloaded', filename, statinfo.st_size,
                     'bytes.')
-  tarfile.open(filepath, 'r:gz').extractall(dest_directory)
+  #tarfile.open(filepath, 'r:gz').extractall(dest_directory)
 
 
 def ensure_dir_exists(dir_name):
