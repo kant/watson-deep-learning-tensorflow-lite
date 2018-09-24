@@ -186,7 +186,7 @@ $ cp ${PROJECT_DIR}/volume/labels.txt ${PROJECT_DIR}/ios-camera/data/labels.txt
 ```
 
 
-### Local Training, Watson Traning and Fabric for Deep Learning Training
+### Local Training, Watson Training and Fabric for Deep Learning Training
 
 Run the Docker image:
 
