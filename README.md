@@ -1,3 +1,6 @@
+# WORK IN PROGRESS
+## Please re-visit soon for the completed code pattern
+
 # Deploying Watson Deep Learning Models to Edge Devices
 
 This project includes sample code how to train a model with [TensorFlow](https://www.tensorflow.org/) and the [Deep Learning service](https://www.ibm.com/blogs/watson/2018/03/deep-learning-service-ibm-makes-advanced-ai-accessible-users-everywhere/) within Watson Studio and how to deploy and access the model on iOS devices.
@@ -13,7 +16,7 @@ In order to train the model I've taken pictures from seven items: plug, soccer b
 ![alt text](documentation/items-small.JPG "Photo")
 
 
-## Prerequisites 
+## Prerequisites
 
 Get a free [IBM Cloud](https://ibm.biz/nheidloff) lite account (no time restriction, no credit card required).
 
@@ -40,7 +43,7 @@ $ my_project_dir=$(pwd)
 $ export PROJECT_DIR=$my_project_dir
 $ cd data
 $ wget http://download.tensorflow.org/models/mobilenet_v1_2018_02_22/mobilenet_v1_0.25_224.tgz
-$ tar xvzf mobilenet_v1_0.25_224.tgz 
+$ tar xvzf mobilenet_v1_0.25_224.tgz
 $ cd mobilenet_v1_0.25_224
 $ wget http://download.tensorflow.org/models/mobilenet_v1_0.25_224_frozen.tgz
 $ tar xvzf mobilenet_v1_0.25_224_frozen.tgz
@@ -60,7 +63,7 @@ Upload bucket with MobileNet and data (use your unique bucket name):
 
 ```bash
 $ cd ${PROJECT_DIR}/data
-$ aws --endpoint-url=http://s3-api.dal-us-geo.objectstorage.softlayer.net --profile ibm_cos s3 cp . s3://nh-recognition-input/ --recursive 
+$ aws --endpoint-url=http://s3-api.dal-us-geo.objectstorage.softlayer.net --profile ibm_cos s3 cp . s3://nh-recognition-input/ --recursive
 ```
 
 Prepare the training:
@@ -122,7 +125,7 @@ Upload bucket with MobileNet and data (use your unique bucket name):
 
 ```bash
 $ cd data/
-$ $s3cmd cp . s3://nh-hunt-input/ --recursive 
+$ $s3cmd cp . s3://nh-hunt-input/ --recursive
 ```
 
 Prepare the training:
@@ -193,7 +196,7 @@ $ docker run -v ${PROJECT_DIR}/volume:/volume -it tensorflow/tensorflow:1.7.1-de
 
 In the Docker container invoke these commands:
 
-```bash 
+```bash
 $ toco \
   --input_file=/volume/training/graph.pb \
   --output_file=/volume/graph.lite \
@@ -221,7 +224,7 @@ Most of the code of this project has been copied from [TensorFlow for Poets 2: T
 
 For iOS I've run into some issues (not quantized model and different TensorFlow versions). I've made a few changes to the [iOS photos app](https://github.com/googlecodelabs/tensorflow-for-poets-2/tree/master/ios/tflite) and the [iOS camera app](https://github.com/tensorflow/tensorflow/tree/master/tensorflow/contrib/lite/examples/ios/camera) which you can find in the directories [ios-photos](/ios-photos) and [ios-camera](/ios-camera).
 
-See the TensorFlow [documentation](https://www.tensorflow.org/mobile/tflite/demo_ios) how to install the prerequisites. 
+See the TensorFlow [documentation](https://www.tensorflow.org/mobile/tflite/demo_ios) how to install the prerequisites.
 
 Invoke these commands to launch the iOS projects in Xcode.
 
